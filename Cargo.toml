@@ -1,0 +1,30 @@
+[package]
+name = "minecraft_viewer"
+version = "0.1.0"
+authors = ["jam1garner <8260240+jam1garner@users.noreply.github.com>"]
+edition = "2018"
+
+[dependencies]
+piston = "0.52.0"
+piston2d-opengl_graphics = "0.74.0"
+piston2d-graphics = "0.37.0"
+piston2d-touch_visualizer = "0.27.0"
+prc-rs = "1.1.0"
+
+[dependencies.pistoncore-sdl2_window]
+version = "0.66.0"
+optional = true
+
+[dependencies.pistoncore-glfw_window]
+version = "0.68.0"
+optional = true
+
+[dependencies.pistoncore-glutin_window]
+version = "0.67.0"
+optional = true
+
+[features]
+default = ["include_glfw"]
+include_sdl2 = ["pistoncore-sdl2_window"]
+include_glfw = ["pistoncore-glfw_window"]
+include_glutin = ["pistoncore-glutin_window"]
